@@ -554,6 +554,10 @@ a.card:hover, .card.is-interactive:hover { transform: translateY(-6px); box-shad
 .news-thumb:hover img { transform: scale(1.12); }
 @media (max-width: 620px) {
   .news-item { grid-template-columns: 1fr; gap: 0.4rem; }
+  /* date on its own line, then thumbnails share one row (a lone thumbnail still fills the width) */
+  .news-left { flex-direction: row; flex-wrap: wrap; }
+  .news-date { flex: 0 0 100%; }
+  .news-thumb { flex: 1 1 0; min-width: 0; width: auto; }
 }
 
 /* ------------------------------ scroll reveal -------------------------------- */
